@@ -137,6 +137,7 @@ label {
 }
 
 @media (max-width: 600px) {
+
     .details-url {
         display: block;
     }
