@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --primary-color: #25a7f0;
+    --red-color: #ff386a;
+    --darkred-color: #dc2626;
+    --yellor-color: #ff9b0b;
+    --blue-color: #f2f6fc;
+    --green-color: #4ade80;    
+    --url-hover-color: #268df0;
+}
+
+
+/* ELEMENTS CSS */
+
+h1 {
+    text-align: center;
+}
+
+legend {
+    color: var(--url-hover-color);
+    font-weight: 700;
+}
+
+label {
+    padding: 0.5rem 1rem;
+    display: inline-block;
+}
+
+/* CLASS CSS */
+
+.components {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+}
+
+.header span{
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    padding: 4px 8px;
+}
+
+.mail-initial-page {
+    width: 90%;
+    margin: auto;
+}
+
+.mail-listing {
+    position: relative;
+    padding: 1rem;
+    background-color: var(--blue-color);
+    border: 0;
+    border-radius: 0.5rem;
+}
+
+.mail-listing:hover {
+    background-color: #fff;
+}
+
+.utils-btn {
+    position: absolute;
+    right: 1rem;
+}
+
+.mail-listing button {
+    color: var(--url-hover-color);
+    padding: 4px 8px;
+    margin: 0 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border: 0;
+    background-color: transparent;
+}
+
+.mail-listing button:hover {
+    font-weight: 700;
+}
+
+.mail-listing .details-url{
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: black;
+}
+
+.mail-listing .details-url:hover{
+    color: var(--url-hover-color)
+}
+
+/* REACT_ICONS */
+.star {
+    color: var(--yellor-color);
+    font-size: 1.3rem;
+}
+
+.unstar {
+    color: #999;
+    font-size: 1.3rem;
+}
+
+.delete-btn {
+    color: var(--red-color)
+}
+
+.delete-btn:hover {
+    color: var(--darkred-color)
+}
+
+.single-mail-btn {
+    cursor: pointer;
+    border: 0;
+    font-size: 1rem;
+    background-color: var(--primary-color);
+    padding: 8px 12px;
+    border-radius: 0.375rem;
+    color: white;
+}
+
+.single-mail-btn:hover {
+    background-color: var(--url-hover-color);
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 1000px) {
+    .header {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 600px) {
+    .details-url {
+        display: block;
+    }
+
+    .utils-btn {
+        position: relative;
+        padding-top: 1rem;
+    }
+    
+    .mail-listing button {
+        padding: 1rem 0 0;
+    } 
+}
+
+@media (max-width: 480px){
+    .mail-listing button {
+        display: block;
+    } 
+}
+
