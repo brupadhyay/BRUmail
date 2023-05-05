@@ -17,7 +17,7 @@ export default function IndividualMailPage() {
 
   useEffect(() => {
     if (mailToDisplay === undefined) navigate("*");
-  }, []);
+  }, [mailToDisplay, navigate]);
 
   return (
     <div className="mail-initial-page">
