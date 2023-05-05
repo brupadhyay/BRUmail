@@ -7,6 +7,7 @@ import Inbox from "./pages/Inbox";
 import Trash from "./pages/Trash";
 import SpamFolder from "./pages/SpamFolder";
 import IndividualMailPage from "./pages/IndividualMailPage";
+import NotFound from "./pages/error/Error404";
 
 function App() {
   return (
@@ -16,10 +17,10 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Inbox />} />
-          <Route path="/inbox" element={<Inbox />} />
           <Route path="/trash" element={<Trash />} />
           <Route path="/spam" element={<SpamFolder />} />
           <Route path="/:mailId" element={<IndividualMailPage />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
     </>

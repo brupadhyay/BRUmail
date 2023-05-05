@@ -14,7 +14,7 @@ const getActiveStyle = ({ isActive }) => ({
 export default function Header() {
   return (
     <div className="header">
-      <NavLink style={getActiveStyle} to="/inbox">
+      <NavLink style={getActiveStyle} to="/">
         <span>
           <MdInbox
             style={{
