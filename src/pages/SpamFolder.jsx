@@ -9,8 +9,8 @@ export default function SpamFolder() {
     <div className="mail-initial-page">
       {spam.length === 0 ? (
         <div style={{ textAlign: "center" }}>
-          <img width="30%" src={spamlogo} alt="inbox-empty" />
-          <p>Congratulations, no conversations in spam</p>
+          <img width="40%" src={spamlogo} alt="inbox-empty" />
+          <h3>Congratulations, no conversations in spam</h3>
         </div>
       ) : (
         spam.map((mail) => <MailListing key={mail.mId} {...mail} spam />)

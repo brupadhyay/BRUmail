@@ -69,22 +69,22 @@ export default function MailListing({
         </button>
         {unread ? (
           <button style={displayButtonOrHide} onClick={() => markAsRead(mId)}>
-            Mark as read
+            Mark as Read
           </button>
         ) : (
           <button style={displayButtonOrHide} onClick={() => markAsUnread(mId)}>
-            Mark as unread
+            Mark as Unread
           </button>
         )}
 
         <button style={displayButtonOrHide} onClick={() => addToSpam(mId)}>
-          Report spam
+          Report Spam
         </button>
         {spam && (
-          <button onClick={() => removeFromSpam(mId)}>Mark as safe</button>
+          <button onClick={() => removeFromSpam(mId)}>Mark as Safe</button>
         )}
         {trash && (
-          <button onClick={() => removeFromTrash(mId)}>Move to inbox</button>
+          <button onClick={() => removeFromTrash(mId)}>Move to Inbox</button>
         )}
       </span>
     </div>

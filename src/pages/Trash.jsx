@@ -10,8 +10,8 @@ export default function Trash() {
     <div className="mail-initial-page">
       {trash.length === 0 ? (
         <div style={{ textAlign: "center" }}>
-          <img width="30%" src={trashlogo} alt="inbox-empty" />
-          <p>Trash is empty, no conversations to show</p>
+          <img width="40%" src={trashlogo} alt="inbox-empty" />
+          <h3>Trash is empty, no conversations to show</h3>
         </div>
       ) : (
         trash.map((mail) => <MailListing key={mail.mId} {...mail} trash />)

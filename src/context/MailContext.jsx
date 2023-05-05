@@ -36,6 +36,9 @@ function mailReducer(state, action) {
     case "recover":
       return [action.recoveredMail, ...state];
 
+    case "mark_all":
+      return state.map((mail) => ({ ...mail, unread: action.payload }));
+
     default:
       console.log("Default");
   }
@@ -88,6 +91,20 @@ export default function MailProvider({ children }) {
     });
   };
 
+  const markAllAsRead = () => {
+    dispatch({
+      type: "mark_all",
+      payload: false,
+    });
+  };
+
+  const markAllAsUnread = () => {
+    dispatch({
+      type: "mark_all",
+      payload: true,
+    });
+  };
+
   const { unreadMailCount } = mails.reduce(
     (acc, { unread }) =>
       unread ? { ...acc, unreadMailCount: acc.unreadMailCount + 1 } : acc,
@@ -104,6 +121,8 @@ export default function MailProvider({ children }) {
         unstarTheMail,
         deleteMail,
         addToInbox,
+        markAllAsRead,
+        markAllAsUnread,
         unreadMailCount,
       }}
     >
