@@ -7,6 +7,7 @@ const getActiveStyle = ({ isActive }) => ({
   color: isActive ? "#268df0" : "#333",
   fontWeight: isActive ? "700" : "600",
   textDecoration: "none",
+  borderBottom: isActive ? "4px solid #25a7f0" : "none",
   padding: "8px 12px",
   margin: "1rem 0",
 });

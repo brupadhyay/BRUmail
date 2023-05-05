@@ -132,7 +132,18 @@ label {
 /* MEDIA QUERIES */
 @media (max-width: 1000px) {
     .header {
+        width: 90%;
+        margin: auto;
+        display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .header a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-grow: 1;
     }
 }
 
