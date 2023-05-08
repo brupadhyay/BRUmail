@@ -23,8 +23,8 @@ export default function IndividualMailPage() {
     <div className="mail-initial-page">
       <h2>Subject: {mailToDisplay?.subject}</h2>
       <p>Body: {mailToDisplay?.content}</p>
-      <button className="single-mail-btn" onClick={() => navigate("/")}>
-        Go To Inbox
+      <button className="single-mail-btn" onClick={() => navigate(-1)}>
+        Go Back
       </button>
     </div>
   );

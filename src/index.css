@@ -43,6 +43,10 @@ label {
     flex-direction: column;
 }
 
+.header a{
+    position: relative;
+}
+
 .header span{
     display: flex;
     align-items: center;
@@ -50,8 +54,15 @@ label {
     padding: 4px 8px;
 }
 
+.header .mail-counter-for-pages {
+    color: var(--darkred-color);
+    position: absolute;
+    right: 4px;
+    top: 0;
+}
+
 .mail-initial-page {
-    width: 90%;
+    width: 85%;
     margin: auto;
 }
 
