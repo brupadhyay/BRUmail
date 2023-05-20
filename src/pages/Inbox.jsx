@@ -20,7 +20,9 @@ export default function Inbox() {
   const mailsAfterFiltering =
     filters.length > 0
       ? mails.filter((mail) =>
-          filters.every((checkboxType) => mail[checkboxType])
+          filters.filter((checkboxType) => mail[checkboxType]).length
+            ? true
+            : false
         )
       : mails;
 
