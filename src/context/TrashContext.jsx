@@ -1,5 +1,6 @@
 import { createContext, useContext, useState } from "react";
 import { MailContext } from "./MailContext";
+import { toastReducer } from "../utilities/Toaster";
 export const TrashContext = createContext();
 
 // eslint-disable-next-line react/prop-types
@@ -11,6 +12,7 @@ export default function TrashProvider({ children }) {
     const mailToDelete = mails.find(({ mId: mailId }) => mailId === mId);
     deleteMail(mId);
     setTrash([mailToDelete, ...trash]);
+    toastReducer('warn', 'Deleted a Mail')
   };
 
   const removeFromTrash = (mId) => {

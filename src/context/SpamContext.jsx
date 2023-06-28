@@ -1,5 +1,6 @@
 import { createContext, useContext, useState } from "react";
 import { MailContext } from "./MailContext";
+import { toastReducer } from "../utilities/Toaster";
 export const SpamContext = createContext();
 
 // eslint-disable-next-line react/prop-types
@@ -11,6 +12,7 @@ export default function SpamProvider({ children }) {
     const spamMail = mails.find(({ mId: mailId }) => mailId === mId);
     deleteMail(mId);
     setSpam([spamMail, ...spam]);
+    toastReducer('error', 'Reported as Spam')
   };
 
   const removeFromSpam = (mId) => {

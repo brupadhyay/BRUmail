@@ -6,11 +6,13 @@ import Trash from "./pages/Trash";
 import SpamFolder from "./pages/SpamFolder";
 import IndividualMailPage from "./pages/IndividualMailPage";
 import NotFound from "./pages/error/Error404";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
     <>
       <h1>BRU's mailbox</h1>
+      <ToastContainer />
       <div className="components">
         <Header />
         <Routes>

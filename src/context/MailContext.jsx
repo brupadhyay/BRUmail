@@ -1,5 +1,6 @@
 import { createContext, useReducer } from "react";
 import { mails as InitialState } from "../mailDB/fetchMail";
+import { toastReducer } from "../utilities/Toaster";
 
 export const MailContext = createContext();
 
@@ -53,6 +54,7 @@ export default function MailProvider({ children }) {
       type: "mark_read",
       mId,
     });
+    toastReducer('success', 'Marked as Read')
   };
 
   const markAsUnread = (mId) => {
@@ -60,6 +62,7 @@ export default function MailProvider({ children }) {
       type: "mark_unread",
       mId,
     });
+    toastReducer('success', 'Marked as Unread');
   };
 
   const starTheMail = (mId) => {
@@ -67,6 +70,7 @@ export default function MailProvider({ children }) {
       type: "star",
       mId,
     });
+    toastReducer('success', 'Marked as Important')
   };
 
   const unstarTheMail = (mId) => {
@@ -74,6 +78,7 @@ export default function MailProvider({ children }) {
       type: "unstar",
       mId,
     });
+    toastReducer('success', 'Marked as Unimportant');
   };
 
   const deleteMail = (mId) => {
@@ -89,6 +94,7 @@ export default function MailProvider({ children }) {
       type: "recover",
       recoveredMail,
     });
+    toastReducer('success', 'Added to Inbox')
   };
 
   const markAllAsRead = () => {
@@ -96,6 +102,7 @@ export default function MailProvider({ children }) {
       type: "mark_all",
       payload: false,
     });
+    toastReducer('info', 'Marked All as Read')
   };
 
   const markAllAsUnread = () => {
@@ -103,6 +110,7 @@ export default function MailProvider({ children }) {
       type: "mark_all",
       payload: true,
     });
+    toastReducer("info", "Marked All as Unread");
   };
 
   const { unreadMailCount } = mails.reduce(
