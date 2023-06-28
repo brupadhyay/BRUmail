@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, NavLink } from "react-router-dom";
 
 import Header from "./components/Header";
 import Inbox from "./pages/Inbox";
@@ -8,10 +8,12 @@ import IndividualMailPage from "./pages/IndividualMailPage";
 import NotFound from "./pages/error/Error404";
 import { ToastContainer } from "react-toastify";
 
-function App() {
+const App = () => {
   return (
     <>
-      <h1>BRU's mailbox</h1>
+      <a href="/">
+        <h1>BRU's mailbox</h1>
+      </a>
       <ToastContainer />
       <div className="components">
         <Header />
@@ -25,6 +27,6 @@ function App() {
       </div>
     </>
   );
-}
+};
 
 export default App;

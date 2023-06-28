@@ -17,8 +17,15 @@
 
 /* ELEMENTS CSS */
 
+a {
+    text-decoration: none;
+    color: var(--primary-color)
+}
+
+
 h1 {
     text-align: center;
+    word-wrap: balance;
 }
 
 legend {
