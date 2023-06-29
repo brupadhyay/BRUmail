@@ -3,6 +3,7 @@ import { MdInbox } from "react-icons/md";
 import { RiSpam2Fill } from "react-icons/ri";
 import { FaTrashAlt } from "react-icons/fa";
 import { useContext } from "react";
+
 import { SpamContext } from "../context/SpamContext";
 import { TrashContext } from "../context/TrashContext";
 

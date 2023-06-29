@@ -1,4 +1,5 @@
 import { useContext } from "react";
+
 import { SpamContext } from "../context/SpamContext";
 import MailListing from "../components/MailListing";
 import spamlogo from "../assets/spam.svg";

@@ -1,8 +1,9 @@
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 import { mails as allMailsData } from "../mailDB/fetchMail";
-import { useEffect } from "react";
+
 
 export default function IndividualMailPage() {
   const { mailId } = useParams();
@@ -13,7 +14,6 @@ export default function IndividualMailPage() {
 
   const mailToDisplay = getMailDetails(allMailsData, mailId);
 
-  console.log(mailToDisplay);
 
   useEffect(() => {
     if (mailToDisplay === undefined) navigate("*");

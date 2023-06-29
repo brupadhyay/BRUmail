@@ -21,6 +21,8 @@
         - /individual
         - /spam
         - /trash
+   - utilities
+         - Toaster.jsx
    - App.jsx
    - main.jsx
    - index.css

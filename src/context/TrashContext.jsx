@@ -1,6 +1,8 @@
 import { createContext, useContext, useState } from "react";
+
 import { MailContext } from "./MailContext";
 import { toastReducer } from "../utilities/Toaster";
+
 export const TrashContext = createContext();
 
 // eslint-disable-next-line react/prop-types

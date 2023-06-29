@@ -3,7 +3,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 const toastStyle = {
   position: "top-right",
-  autoClose: 1500,
+  autoClose: 1000,
   hideProgressBar: false,
   closeOnClick: true,
   pauseOnHover: true,

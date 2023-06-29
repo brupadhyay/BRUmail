@@ -1,4 +1,5 @@
 import { useContext, useState } from "react";
+
 import { MailContext } from "../context/MailContext";
 import MailListing from "../components/MailListing";
 import inboxlogo from "../assets/inbox.svg";

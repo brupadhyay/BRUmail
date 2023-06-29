@@ -1,4 +1,5 @@
 import { useContext } from "react";
+
 import { TrashContext } from "../context/TrashContext";
 import MailListing from "../components/MailListing";
 import trashlogo from "../assets/trash.svg";
