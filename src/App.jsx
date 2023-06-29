@@ -1,4 +1,5 @@
-import { Routes, Route, NavLink } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 
 import Header from "./components/Header";
 import Inbox from "./pages/Inbox";
@@ -6,7 +7,6 @@ import Trash from "./pages/Trash";
 import SpamFolder from "./pages/SpamFolder";
 import IndividualMailPage from "./pages/IndividualMailPage";
 import NotFound from "./pages/error/Error404";
-import { ToastContainer } from "react-toastify";
 
 const App = () => {
   return (
